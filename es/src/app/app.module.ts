@@ -7,11 +7,13 @@ import {   //Importare le funzionalità nella nostra applicazione
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap'; 
 import { AppComponent } from './app.component';
 import { F1Component } from './f1/f1.component';
+import { RiceviComponent } from './ricevi/ricevi.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    F1Component
+    F1Component,
+    RiceviComponent
   ],
   imports: [
     BrowserModule, FormsModule,  //Anche qui

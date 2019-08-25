@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import {FormBuilder,  FormGroup, Validators } from '@angular/forms';
 @Component({
   selector: 'app-f1',
@@ -6,6 +6,8 @@ import {FormBuilder,  FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./f1.component.css']
 })
 export class F1Component implements OnInit {
+
+  @Output() nomeOutput = new EventEmitter<string>();
 
    f1 : FormGroup;
    input:string;
@@ -32,6 +34,8 @@ export class F1Component implements OnInit {
       
       this.input =  this.f1.controls['nome'].value;
      console.log(this.input)
+     
+     this.nomeOutput.emit(this.input);
  
   }
   

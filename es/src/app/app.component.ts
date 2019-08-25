@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'es';
+  out:string;
+  riempi(event){
+    this.out = event;
+      console.log("out", event);
+  }
+
 }
